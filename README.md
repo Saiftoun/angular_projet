@@ -50,11 +50,6 @@ ng serve
 ```
 Navigate to `http://localhost:4200/` in your browser. The application will automatically reload when you make changes to the source files.
 
-### Build for Production
-```bash
-ng build
-```
-The build artifacts will be stored in the `dist/` directory.
 
 ## Project Structure
 ```
