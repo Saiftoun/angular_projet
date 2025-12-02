@@ -1,59 +1,124 @@
-# EcommProject
+# E-Commerce Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
+## Description
+Modern and responsive e-commerce application built with Angular that displays products fetched from an external API (FakeStore API). Features include product filtering by category, cart functionality, and a sleek user interface powered by Bootstrap.
 
-## Development server
+## Features
+- 📦 Display products from external API
+- 🔍 Filter products by category
+- 🛒 Shopping cart functionality
+- 📱 Fully responsive design
+- 🎨 Modern UI with Bootstrap
+- 🚀 Fast navigation with Angular routing
 
-To start a local development server, run:
+## Technologies Used
+- Angular (latest version)
+- TypeScript
+- Bootstrap 5
+- FakeStore API
+- RxJS
 
+## Prerequisites
+Before running this project, make sure you have:
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+- Angular CLI
+
+## Installation
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Saiftoun/angular_projet.git
+cd angular_projet
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Install Bootstrap
+```bash
+npm install bootstrap
+```
+
+## Running the Application
+
+### Development Server
 ```bash
 ng serve
 ```
+Navigate to `http://localhost:4200/` in your browser. The application will automatically reload when you make changes to the source files.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
+### Build for Production
 ```bash
 ng build
 ```
+The build artifacts will be stored in the `dist/` directory.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+## Project Structure
+```
+src/
+├── app/
+│   ├── products/
+│   │   ├── components/
+│   │   │   ├── all-products/
+│   │   │   └── products-details/
+│   │   └── services/
+│   │       └── products.service.ts
+│   ├── carts/
+│   │   └── components/
+│   │       └── cart/
+│   ├── shared/
+│   │   └── header/
+│   └── app.routes.ts
+└── environments/
+    └── environment.ts
 ```
 
-## Running end-to-end tests
+## Available Routes
+- `/products` - View all products
+- `/cart` - Shopping cart
+- `/details` - Product details
+- Default redirect to `/products`
 
-For end-to-end (e2e) testing, run:
+## API Integration
+This application uses the **FakeStore API** to fetch product data:
+- Base URL: `https://fakestoreapi.com/`
+- Endpoints used:
+  - `GET /products` - Fetch all products
+  - `GET /products/categories` - Fetch all categories
+  - `GET /products/category/{category}` - Fetch products by category
 
-```bash
-ng e2e
-```
+## Key Functionalities
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Product Display
+- Displays products in a responsive grid layout
+- Shows product image, title, description, and price
 
-## Additional Resources
+### Category Filtering
+- Dropdown menu to filter products by category
+- Option to view all products or specific categories
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Navigation
+- Header with navigation links
+- Smooth routing between pages
+
+## Screenshots
+*(Add screenshots of your application here)*
+
+## Future Enhancements
+- Add product details page
+- Implement shopping cart with add/remove functionality
+- User authentication
+- Order history
+- Payment integration
+
+## Author
+Saiftoun
+
+## License
+This project is open source and available under the MIT License.
+
+## Support
+For issues or questions, please open an issue on GitHub.
